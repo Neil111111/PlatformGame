@@ -57,10 +57,12 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
     }
+
     void CoolDownTimer()
     {
         
     }
+    
     void PlayerDash()
     {
         if(Input.GetKey(KeyCode.Space))
