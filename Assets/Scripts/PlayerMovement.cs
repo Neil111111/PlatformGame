@@ -6,11 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
    //Movements Variables
     public float _moveSpeed = 7f;
+    public float dashMultiplier = 5f;
 
     //Health Variables
-    public float playerHealth;
-    public float maxPlayerHealth = 100f;
-    EnemySystem _takeHit;
 
 
     //Inputs
@@ -31,11 +29,6 @@ public class PlayerMovement : MonoBehaviour
        rb = GetComponent<Rigidbody2D>(); 
     }
 
-    void Start()
-    {
-        playerHealth = maxPlayerHealth;
-    }
-
     void Update()
     {
         playerRotate();
@@ -44,9 +37,9 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         Movement();
+        PlayerDash();
     }
-
-
+    
     void Movement()
     {
         xInp = Input.GetAxis("Horizontal");
@@ -63,5 +56,16 @@ public class PlayerMovement : MonoBehaviour
 
         float angle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
+    }
+    void CoolDownTimer()
+    {
+        
+    }
+    void PlayerDash()
+    {
+        if(Input.GetKey(KeyCode.Space))
+        {
+            CoolDownTimer();
+        }
     }
 }

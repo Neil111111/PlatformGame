@@ -1089,7 +1089,7 @@ TextureImporter:
     nameFileIdTable:
       sprite-sheet-64x64_8: 21300016
       sprite-sheet-64x64_9: 21300018
-      sprite-sheet-64x64_39: 21300078
+      sprite-sheet-64x64_5: 21300010
       sprite-sheet-64x64_25: 21300050
       sprite-sheet-64x64_18: 21300036
       sprite-sheet-64x64_34: 21300068
@@ -1126,7 +1126,7 @@ TextureImporter:
       sprite-sheet-64x64_2: 21300004
       sprite-sheet-64x64_22: 21300044
       sprite-sheet-64x64_31: 21300062
-      sprite-sheet-64x64_5: 21300010
+      sprite-sheet-64x64_39: 21300078
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
