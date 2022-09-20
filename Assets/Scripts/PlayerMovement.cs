@@ -46,6 +46,10 @@ public class PlayerMovement : MonoBehaviour
         yInp = Input.GetAxis("Vertical");
 
         rb.velocity = new Vector3(xInp * _moveSpeed,yInp * _moveSpeed,0f);
+        if(xInp >= 1f  && yInp >= 1f)
+        {
+            _moveSpeed = _moveSpeed / 2 ;
+        }
     }
 
     void playerRotate()
